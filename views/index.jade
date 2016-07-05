@@ -1,0 +1,76 @@
+extends layout
+
+block content
+    #mainHeader
+        img(src="./images/header_main.jpg")
+        button(type="button") Head straight to my resume
+    
+    // This summarizes my travel
+    figure#travelTimeline
+        .col-md-4
+            img.desaturate(src="./images/nepal_icon.png")
+            figcaption From Nepal
+        .col-md-4
+            img.desaturate(src="./images/new_jersey.png")
+            figcaption To New Jersey
+        .col-md-4
+            img.desaturate(src="./images/programmer.png")
+            figcaption Studying Computer Science
+    
+    #intro
+        .col-md-8
+            h1 Namaste!
+            p I am Sujil Maharjan and I am a senior Computer Science major at Ramapo College of New Jersey. I love travelling, adventures (I am sure it is imminant through sky-diving picture), listening to music, teaching, and programming. 
+        img.col-md-4(src="./images/profile_picture.jpg")
+        
+    #passion
+        .col-md-1
+        .col-md-5
+            h1 Things I do for interest
+            ol  
+                li Travelling
+                li Coding
+                li Hiking
+                li Teaching someone
+        .col-md-6
+            #myCarousel.carousel.slide(data-ride='carousel')
+                // Indicators
+                ol.carousel-indicators
+                    li.active(data-target='#myCarousel', data-slide-to='0')
+                    li(data-target='#myCarousel', data-slide-to='1')
+                    li(data-target='#myCarousel', data-slide-to='2')
+                    //li(data-target='#myCarousel', data-slide-to='3')
+                // Wrapper for slides
+                .carousel-inner(role='listbox')
+                    .item.active
+                        img(src='./images/image1.jpg', alt='Chania')
+                        
+                    .item
+                        img(src='./images/image2.jpg', alt='Chania')
+           
+                           
+                    .item
+                        img(src='/images/image3.jpg', alt='Flower')
+
+                            
+                // Left and right controls
+                a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
+                    span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+                    span.sr-only Previous
+                a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
+                    span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+                    span.sr-only Next
+    
+    // This content displays the experiences for the job
+    #experience
+        table.table
+            thead
+                th(style="width: 20%") Company
+                th(style="width: 60%") My role
+                th(style="width: 20%") Timeline
+            tbody
+                tr
+                    td 
+    
+    .freeSpace 
+    
