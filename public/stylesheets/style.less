@@ -1,3 +1,9 @@
+@header-color: #00a1f1;
+@skill-high-color: #00C957;
+@skill-medium-color: #FFA500;
+@skill-low-color: #1E90FF;
+@cornsilk-white: #fff8dc;
+
 body {
   font: 20px "Segoe UI", Helvetica, Arial, sans-serif;
     margin: 0px;
@@ -47,6 +53,13 @@ a {
     width: auto;
 }
 
+.insideTablePadding() {
+    padding-top: 10px;
+    padding-left: 0px;
+    margin-left: 0px;
+    padding-botton: 10px;
+}
+
 .normalText() {
     font-size: 30px;
 }
@@ -56,7 +69,7 @@ a {
     padding-bottom: 150px;
 }
 
-p, li {
+p, #passion li {
     .normalText();
 }
 
@@ -91,29 +104,160 @@ img.desaturate {
     }
 }
 
-#passion {
-   
-    margin-top: 120px;
-    .general_padding();
-    
-    ol {
-        list-style: none;
-        padding: 0px;
-        margin: 0px;
+#myCarousel {
+    margin-top: 250px;
     }
-    
+
+.footer-space {
+    background-color: #222222;
+
+    margin-top: 100px;
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
 
-
-.freeSpace {
+#footer {
     .margin();
-    margin-top: 120px;
-    .general_padding();
-    
-    margin: 100px;
 }
 
 #experience {
     .margin();
     .general_padding();
+}
+
+.display-option, .logo-display {
+    display: none;
+    text-align: left;
+
+    img {
+        max-height: 100px;
+        max-width: 130px;
+        object-fit: contain;
+        .insideTablePadding();
+    }
+}
+
+
+
+table li, table ol, table ul, tr{
+    font-size: medium ;
+    .insideTablePadding();
+    cursor: pointer;
+}
+
+ol, ul {
+    list-style: none;
+    .insideTablePadding();
+}
+.header-color {
+    color: @header-color;
+}
+
+#skills, #extracurricular {
+    .margin();
+    .general_padding();
+    // TODO: the padding is very high on top here
+    padding-top: 50px;
+}
+
+.small-font {
+    font-size: medium;
+}
+
+#skills span {
+    display: inline-block;
+    background-color: lightgrey;
+    min-width: 200px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.skill-high {
+    background-color: @skill-high-color !important;
+}
+
+.skill-medium {
+    background-color: @skill-medium-color !important;
+}
+
+.skill_low {
+    background-color: @skill-low-color !important;
+}
+
+.col-head {
+    background-color: orange;
+}
+
+#extracurricular {
+    table,tr, td,th {
+        .normalText();
+        border-style: none;
+    }
+
+}
+
+.italic {
+    font-style: italic;
+    font-size: large;
+}
+
+.description {
+    font-size: large;
+    color: grey;
+}
+
+.medium-font {
+    font-size: large;
+}
+
+.black-bg-font {
+    color: @cornsilk-white;
+}
+
+#gmail-logo {
+    height:30px;
+    width: 40px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+// These consists of block quote stylings
+blockquote {
+
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+      .margin();
+  //padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+.author {
+    display: block;
+    font-size: larger;
+    font-style: bold;
+    text-align: right;
+}
+
+.contacts {
+    .insideTablePadding();
+
+    span {
+        padding-left: 20px;
+    }
 }
