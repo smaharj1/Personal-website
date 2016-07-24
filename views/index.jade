@@ -32,18 +32,26 @@ block content
             li.active(data-target='#myCarousel', data-slide-to='0')
             li(data-target='#myCarousel', data-slide-to='1')
             li(data-target='#myCarousel', data-slide-to='2')
+            li(data-target='#myCarousel', data-slide-to='3')
+            li(data-target='#myCarousel', data-slide-to='4')
+            li(data-target='#myCarousel', data-slide-to='5')
 
         // Wrapper for slides
         .carousel-inner(role='listbox')
             .item.active
-                img(src='./images/image1.jpg', alt='Chania')
-                
+                img(src='./images/photos/image1.jpg', alt='Chania') 
             .item
-                img(src='./images/image2.jpg', alt='Chania')
+                img(src='./images/photos/image2.gif', alt='Chania')
+            .item
+                img(src='/images/photos/image3.jpg', alt='Flower')
+            .item
+                img(src='/images/photos/image4.jpg', alt='')
+            .item
+                img(src='/images/photos/image5.jpg', alt='')
+            .item
+                img(src='/images/photos/image6.jpg', alt='')
 
-                
-            .item
-                img(src='/images/image3.jpg', alt='Flower')
+            
 
 
         // Left and right controls
@@ -57,6 +65,7 @@ block content
     
     #experience
         h1.header-color I also have a bit of experience
+        p.small-font The rows are clickable.
 
         // Table containing all the relevant experiences
         table.table.table-hover.table-striped
