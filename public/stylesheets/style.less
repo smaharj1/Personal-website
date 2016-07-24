@@ -5,6 +5,7 @@
 @cornsilk-white: #fff8dc;
 @black-color: #222222;
 
+
 body {
   font: 20px "Segoe UI", Helvetica, Arial, sans-serif;
     margin: 0px;
@@ -22,12 +23,12 @@ a {
 #mainHeader {
     margin:0px !important;
     padding: 0px !important;
-    button {
+    a {
        position: absolute; 
        top: 70vh; 
        left: 0; 
-
-        color: white;
+       text-decoration: none;
+        color: @cornsilk-white;
        font: bold 24px/45px Helvetica, Sans-Serif; 
        letter-spacing: -1px;  
        background: rgb(0, 0, 0); /* fallback color */
@@ -36,9 +37,7 @@ a {
         border-style: none;
         border-bottom-right-radius: 10px;
         border-top-right-radius: 10px;
-        margin: 0px;
-        
-        
+        margin: 0px; 
     }
     
     img {
@@ -88,7 +87,6 @@ p, #passion li {
 #travelTimeline {
     .margin();
     text-align: center;
-    .general_padding();
     
     img {
         max-height: 200px;
@@ -106,30 +104,18 @@ img.desaturate {
 
 #intro {
     .margin();
-    margin-top: 120px;
-    .general_padding();
-    
-    
+   
     img {
         max-height: 350px;
         object-fit:contain;
     }
 }
 
-#myCarousel {
-    margin-top: 250px;
-    }
 
-.footer-space {
-    background-color: #222222;
-
-    margin-top: 100px;
-    padding-top: 20px;
-    padding-bottom: 50px;
-}
 
 #footer {
     .margin();
+    margin-bottom: 20px;
 }
 
 #experience {
@@ -167,9 +153,7 @@ ol, ul {
 
 #skills, #extracurricular {
     .margin();
-    .general_padding();
-    // TODO: the padding is very high on top here
-    padding-top: 50px;
+
 }
 
 .small-font {
@@ -199,9 +183,7 @@ ol, ul {
     background-color: @skill-low-color !important;
 }
 
-.col-head {
-    background-color: orange;
-}
+
 
 #extracurricular {
     table,tr, td,th {

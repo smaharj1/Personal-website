@@ -8,7 +8,15 @@ $(document).ready(function () {
         $(this).addClass("desaturate").animate({zoom: '100%'}, "fast");
     });
 
-    $('tr').on('click', function () {
+    $('#experience tr').on('click', function () {
+        var jobDetail = $(this).find('.display-option');
+        jobDetail.toggle('fast');
+
+        var logoDisplay = $(this).find('.logo-display');
+        logoDisplay.toggle();
+    });
+
+    $('#extracurricular td').on('click', function () {
         var jobDetail = $(this).find('.display-option');
         jobDetail.toggle('fast');
 

@@ -3,28 +3,31 @@ extends layout
 block content
     #mainHeader
         img(src="./images/header_main.jpg")
-        button(type="button") Head straight to my resume
+        a(href='./data/Maharjan_Resume.pdf' target='_blank') Head straight to my resume
     
     blockquote 
         p When you have exhausted all possibilities, remember this - you haven't.
         p.author - Thomas Edison
-    // This summarizes my travel
-    figure#travelTimeline
-        .col-md-4
-            img.desaturate(src="./images/nepal_icon.png")
-            figcaption From Nepal
-        .col-md-4
-            img.desaturate(src="./images/new_jersey.png")
-            figcaption To New Jersey
-        .col-md-4
-            img.desaturate(src="./images/programmer.png")
-            figcaption Studying Computer Science
     
-    #intro
-        .col-md-8
-            h1.header-color Namaste!
-            p I am Sujil Maharjan and I am a senior Computer Science major at Ramapo College of New Jersey. I love travelling, adventures (I am sure it is imminant through sky-diving picture), listening to music, teaching, and programming. 
-        img.col-md-4(src="./images/profile_picture.jpg")
+    // This summarizes my travel
+    #travel
+        figure#travelTimeline
+            .col-md-4
+                img.desaturate(src="./images/nepal_icon.png")
+                figcaption From Nepal
+            .col-md-4
+                img.desaturate(src="./images/new_jersey.png")
+                figcaption To New Jersey
+            .col-md-4
+                img.desaturate(src="./images/programmer.png")
+                figcaption Studying Computer Science
+        
+    #introBlock
+        #intro
+            .col-md-8
+                h1.header-color Namaste!
+                p I am Sujil Maharjan and I am a senior Computer Science major at Ramapo College of New Jersey. I love travelling, adventures (I am sure it is imminant through sky-diving picture), listening to music, teaching, and programming. 
+            img.col-md-4(src="./images/profile_picture.jpg")
         
     #myCarousel.carousel.slide(data-ride='carousel')
         // Indicators
@@ -128,112 +131,113 @@ block content
             | If you would like to look at my projects, please go to my GitHub profile by clicking
             a(href='http://www.github.com/smaharj1', target="_blank") &nbsp here
     
-    #skills
-        h1.header-color I also have skills in few languages and technologies
-        p.small-font (Hover over to find out my skill level)
-        p.small-font Index: Green = High, Orange = Medium, Blue = Have encountered with it at some point
-        ol
-            li
-                span.high Java 
-            li
-                span.high C++
-            li
-                span.medium C
-            li
-                span.high HTML/CSS
-            li
-                span.high Javascript
-            li
-                span.medium AngularJS
-            li
-                span.high MySQl
-            li
-                span.high MongoDB
-            li
-                span.high Visual Studio
-            li
-                span.high Eclipse
-            li
-                span.high IntelliJ
-            li
-                span.high JBehave
-            li
-                span.medium ImageMagick
-            li
-                span.medium Serenity
-            li
-                span.high Nepali
-            li
-                span.high English
-            li
-                span.high Hindi
-            li
-                span.high Newari
+    #skillsBlock
+        #skills
+            h1.header-color I also have skills in few languages and technologies
+            p.small-font (Hover over to find out my skill level)
+            p.small-font Index: Green = High, Orange = Medium, Blue = Have encountered with it at some point
+            ol
+                li
+                    span.high Java 
+                li
+                    span.high C++
+                li
+                    span.medium C
+                li
+                    span.high HTML/CSS
+                li
+                    span.high Javascript
+                li
+                    span.medium AngularJS
+                li
+                    span.high MySQl
+                li
+                    span.high MongoDB
+                li
+                    span.high Visual Studio
+                li
+                    span.high Eclipse
+                li
+                    span.high IntelliJ
+                li
+                    span.high JBehave
+                li
+                    span.medium ImageMagick
+                li
+                    span.medium Serenity
+                li
+                    span.high Nepali
+                li
+                    span.high English
+                li
+                    span.high Hindi
+                li
+                    span.high Newari
             
-        
-    #extracurricular
-        h1.header-color I also handle other leadership roles
-        p.small-font Please click my roles to see how I feel about my roles
-        // Table containing all the relevant experiences
-        table.table
-            thead
-                th(style='width: 33%')
-                th(style='width: 33%')
-                th(style='width: 33%')
-            tbody
-                tr
-                    td
-                        .col-head 
-                            | //hackRamapo
-                        .display-option
-                            .italic Co-founder & Treasurer
-                            p.description 
-                                | I had a great time forming this club from ground-up with few friends. The club is dedicated to 
-                                | foster innovation and creativity in technology on campus. I held  tech workshops such as web
-                                | development, IoT development, Machine Learning sessions, and entrepreneurship sessions to more than
-                                | 10 students per each workshop. I also managed club's budget
-                    td
-                    td 
-                        .col-head 
-                            | Google Club
-                        .display-option
-                            .italic Vice President
-                            p.description
-                                | I joined Google club since its beginning as a Vice-President. We held different events such as 
-                                | recruitment by Google, profile building in LinkedIn.
-                
-                tr
-                    td 
-                    td 
-                        .col-head 
-                            | International Student Organization
-                        .display-option
-                            .italic Student Advisor
-                            p.description
-                                | I was a Secretary of ISO during my sophomore year. I introduced monthly ethnic cuisine and info sessions
-                                | on different international cultures where more than 15 students participated. I also co-sponsored the
-                                | club with many other cultural clubs on campus. Due to the increment in activities, the club budget increased by 100%
-                                | for the following year. I continued as the student advisor for the club next year where I advised 
-                                | club leaders on conducting cultural activities on campus.
-                    td 
-                tr
-                    td 
-                        .col-head 
-                            | Ramapo TAS
-                        .display-option
-                            .italic Computer Science Tutor
-                            p.description
-                                | I tutor Computer Science to mostly freshmen and sophomores. I am a tutor for CS I, CS II, Data Structures,
-                                | Assembly Language, and any other classes that I have already taken.
-                    td
-                    td 
-                        .col-head 
-                            | Computer Club,
-                        .display-option
-                            .italic Active Member    
-                            p.description
-                                | I am a very active member of Computer and Technology club. I helped several of the club events such as 
-                                | hackathons, game nights and weekly meetings.
+    #extracurricularBlock    
+        #extracurricular
+            h1.header-color I also handle other leadership roles
+            p.small-font Please click my roles to see how I feel about my roles
+            // Table containing all the relevant experiences
+            table.table
+                thead
+                    th(style='width: 33%')
+                    th(style='width: 33%')
+                    th(style='width: 33%')
+                tbody
+                    tr
+                        td
+                            .col-head 
+                                | //hackRamapo
+                            .display-option.col-body
+                                .italic Co-founder & Treasurer
+                                p.description 
+                                    | I had a great time forming this club from ground-up with few friends. The club is dedicated to 
+                                    | foster innovation and creativity in technology on campus. I held  tech workshops such as web
+                                    | development, IoT development, Machine Learning sessions, and entrepreneurship sessions to more than
+                                    | 10 students per each workshop. I also managed club's budget
+                        td
+                        td 
+                            .col-head 
+                                | Google Club
+                            .display-option.col-body
+                                .italic Vice President
+                                p.description
+                                    | I joined Google club since its beginning as a Vice-President. We held different events such as 
+                                    | recruitment by Google, profile building in LinkedIn.
+                    
+                    tr
+                        td 
+                        td 
+                            .col-head 
+                                | International Student Organization
+                            .display-option.col-body
+                                .italic Student Advisor
+                                p.description
+                                    | I was a Secretary of ISO during my sophomore year. I introduced monthly ethnic cuisine and info sessions
+                                    | on different international cultures where more than 15 students participated. I also co-sponsored the
+                                    | club with many other cultural clubs on campus. Due to the increment in activities, the club budget increased by 100%
+                                    | for the following year. I continued as the student advisor for the club next year where I advised 
+                                    | club leaders on conducting cultural activities on campus.
+                        td 
+                    tr
+                        td 
+                            .col-head 
+                                | Ramapo TAS
+                            .display-option.col-body
+                                .italic Computer Science Tutor
+                                p.description
+                                    | I tutor Computer Science to mostly freshmen and sophomores. I am a tutor for CS I, CS II, Data Structures,
+                                    | Assembly Language, and any other classes that I have already taken.
+                        td
+                        td 
+                            .col-head 
+                                | Computer Club,
+                            .display-option.col-body
+                                .italic Active Member    
+                                p.description
+                                    | I am a very active member of Computer and Technology club. I helped several of the club events such as 
+                                    | hackathons, game nights and weekly meetings.
 
         
     
