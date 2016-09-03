@@ -39,4 +39,28 @@ $(document).ready(function () {
             $(this).addClass('skill-low').animate({width: '30%'},"slow");
         }
     });
+
+    $('#inputImage').bind('change', function() {
+        alert("ok");
+        var mainFile = this;
+        $.ajax({
+            type:'POST',
+            url :"/processImage",
+            data: {
+                inputFile: mainFile
+            },
+            dataType: 'json',
+            success: function(data) {
+                    console.log('success',data);
+
+            },
+            error:function(exception){alert('Exeption:'+exception);}
+        }); 
+        e.preventDefault();
+    });
+
+
+
+
+
 });

@@ -9,6 +9,13 @@ block content
         p When you have exhausted all possibilities, remember this - you haven't.
         p.author - Thomas Edison
     
+    form
+        .form-group
+            label(for='inputImage') Browse a file
+            input#inputImage.form-control-file(type='file', aria-describedby='imageHelp',name='uploadedImage')
+            small.form-text.text-muted#imageHelp Please upload your image if you want to replace your mood with an appropriate emoji 
+        button.button#uploadImage(type='button') Submit
+
     // This summarizes my travel
     #travel
         figure#travelTimeline
