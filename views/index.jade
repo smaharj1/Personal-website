@@ -246,20 +246,42 @@ block content
             h3.header-color So, what do you think?
             .black-bg-font Please feel free to contact me if you have any questions!
 
-            .contacts
-                a(href="http://www.github.com/smaharj1", target="_blank")
-                    img(src="./images/icons/github.png")
-                    span.black-bg-font Explore my GitHub
-            .contacts
-                a(href="https://www.facebook.com/tsujil", target="_blank")
-                    img(src="./images/icons/facebook.png")
-                    span.black-bg-font Ping me in Facebook
-            .contacts
-                a(href="https://www.linkedin.com/in/sujilmaharjan", target="_blank")
-                    img(src="./images/icons/linkedin.png")
-                    span.black-bg-font Link with me
-            .contacts
-                a(href="mailto:smaharj1@ramapo.edu", target="_blank")
-                    img#gmail-logo(src="http://www.socialtalent.co/wp-content/uploads/2015/07/Gmail-Logo.png")
-                    span.black-bg-font Email me
+            table
+                tbody
+                    tr.contacts(data-href="http://www.github.com/smaharj1")
+                        td 
+                            img(src="./images/icons/github.png")
+                        td.black-bg-font Explore my GitHub
+                    
+                    tr.contacts(data-href="https://www.facebook.com/tsujil")
+                        td 
+                            img(src="./images/icons/facebook.png")
+                        td.black-bg-font Ping me in Facebook
+                    
+                    tr.contacts(data-href="https://www.linkedin.com/in/sujilmaharjan")
+                        td 
+                            img(src="./images/icons/linkedin.png")
+                        td.black-bg-font Link with me
+                    tr.contacts(data-href="mailto:smaharj1@ramapo.edu")
+                        td 
+                            img#gmail-logo(src="http://www.socialtalent.co/wp-content/uploads/2015/07/Gmail-Logo.png")
+                        td.black-bg-font Email me
+                            
+            //- .contacts
+            //-     a(href="http://www.github.com/smaharj1", target="_blank")
+            //-         img(src="./images/icons/github.png")
+            //-         span.black-bg-font Explore my GitHub
+            //- .contacts
+            //-     a(href="https://www.facebook.com/tsujil", target="_blank")
+            //-         img.little-left-width(src="./images/icons/facebook.png")
+            //-         span.black-bg-font Ping me in Facebook
+            //- .contacts
+            //-     a(href="https://www.linkedin.com/in/sujilmaharjan", target="_blank")
+            //-         img(src="./images/icons/linkedin.png")
+            //-         span.black-bg-font Link with me
+            //- .contacts
+            //-     a(href="mailto:smaharj1@ramapo.edu", target="_blank")
+            //-         img.little-left-width#gmail-logo(src="http://www.socialtalent.co/wp-content/uploads/2015/07/Gmail-Logo.png")
+            //-         span.black-bg-font Email me
 
+ 

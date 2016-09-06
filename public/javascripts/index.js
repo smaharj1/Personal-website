@@ -69,6 +69,10 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('.contacts').on('click', function() {
+        window.open($(this).data("href"));
+    });
+
 
 
 
