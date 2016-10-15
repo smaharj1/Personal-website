@@ -1,4 +1,80 @@
-@header-color: #00a1f1;
+@portfolioBackground: rgba(127,23,31,0.6);
+@infoBG: rgba(252,223,21,0.3);
+
+.background1 {
+    background: url('/images/image1.jpg');
+    background-color: rgba(39,35,51,0.8) ;
+}
+
+
+.background2 {
+    background: url('/images/image2.jpg');
+    //background-color: @portfolioBackground ;
+    background-color: rgba(39,35,51,0.8) ;
+}
+
+
+#contact {
+    background:url('/images/image1.jpg');
+}
+
+.footerImage {
+    height: 30px;
+    width: 30px;
+}
+
+.footerTag {
+    padding-left: 5px;
+}
+
+.contacts {
+    padding: 5px;
+}
+
+#linkedin-logo {
+    height: 30px;
+    width: 90px;
+}
+
+#gmail-logo {
+    height:30px;
+    width: 40px;
+}
+
+
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #EEEEEE -moz-use-text-color #FFFFFF;
+  border-style: solid none;
+  border-width: 1px 0;
+  margin: 18px 0;
+}
+
+.resumeHead {
+    font-size: 20px !important;
+    font-weight: 700;
+}
+
+.resumeDate {
+    font-style: italic;
+}
+
+.info {
+    background-color: lighten(@infoBG, 20%);
+}
+
+.topics:hover, a:hover {
+    cursor:pointer;
+}
+
+
+
+// Modificationssssssssssss
+@header-color: #FCDF15;
 @skill-high-color: #00C957;
 @skill-medium-color: #FFA500;
 @skill-low-color: #1E90FF;
@@ -6,61 +82,9 @@
 @black-color: #222222;
 
 
-body {
-  font: 20px "Segoe UI", Helvetica, Arial, sans-serif;
-    margin: 0px;
-    padding: 0px;
-}
-
-h1 {
-    padding-bottom: 20px;
-}
-
-a {
-  color: #00B7FF;
-}
-
-#mainHeader {
-    margin:0px !important;
-    padding: 0px !important;
-    a {
-       position: absolute; 
-       top: 70vh; 
-       left: 0; 
-       text-decoration: none;
-        color: @cornsilk-white;
-       font: bold 24px/45px Helvetica, Sans-Serif; 
-       letter-spacing: -1px;  
-       background: rgb(0, 0, 0); /* fallback color */
-       background: rgba(0, 0, 0, 0.9);
-       padding: 10px;
-        border-style: none;
-        border-bottom-right-radius: 10px;
-        border-top-right-radius: 10px;
-        margin: 0px; 
-    }
-    
-    img {
-        max-width: 100%;
-        height: 80vh; 
-        object-fit: cover;
-        
-    }
-
-
-    @media 
-    only screen and (min-width: 500px) {
-        img {
-            min-width: 100%;
-        }
-    }
-}
-
-
 .margin() {
     margin-left: 10%;
     margin-right: 10%;
-    
     width: auto;
 }
 
@@ -84,43 +108,16 @@ p, #passion li {
     .normalText();
 }
 
-#travelTimeline {
-    .margin();
-    text-align: center;
-    
-    img {
-        max-height: 200px;
-    }
-    
-    figcaption {
-        padding-top: 10px;
-    }
-}
-
 img.desaturate { 
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
 }
 
-#intro {
-    .margin();
-   
-    img {
-        max-height: 350px;
-        object-fit:contain;
-    }
-}
-
-
 
 #footer {
     .margin();
     margin-bottom: 20px;
-}
-
-#experience {
-    .margin();
-    .general_padding();
+    text-align: left;
 }
 
 .display-option, .logo-display {
@@ -135,35 +132,38 @@ img.desaturate {
     }
 }
 
+#experience {
+    .margin();
+}
 
-
-table li, table ol, table ul, tr{
+table li, table ol, table ul, tr, ol{
     font-size: medium ;
     .insideTablePadding();
     cursor: pointer;
+    text-align: left;
+    list-style: none;
 }
 
-ol, ul {
-    list-style: none;
-    .insideTablePadding();
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: lighten(black,20%);
 }
+
 .header-color {
     color: @header-color;
 }
 
 #skills, #extracurricular {
     .margin();
-
 }
 
 .small-font {
     font-size: medium;
-    color: grey; 
+    color: lightgrey; 
 }
 
 #skills span {
     display: inline-block;
-    background-color: lightgrey;
+    background-color: lighten(black,20%);
     min-width: 200px;
     margin-bottom: 5px;
     border-radius: 10px;
@@ -200,7 +200,6 @@ ol, ul {
 
 .description {
     font-size: large;
-    color: grey;
 }
 
 .medium-font {
@@ -285,7 +284,7 @@ only screen and (max-width: 760px),
 	td { 
 		/* Behave  like a "row" */
 		border: none;
-		border-bottom: 1px solid #eee; 
+		//border-bottom: 1px solid #eee; 
 		position: relative;
 		padding-left: 50%; 
 	}

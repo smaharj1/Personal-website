@@ -1,18 +1,50 @@
-$(document).ready(function() {
 
-    // This controls the hover for travel timeline
-    $('#travelTimeline img').hover(function() {
-            $(this).removeClass("desaturate").animate({
-                zoom: '120%'
-            }, "fast");
-        },
-        function() {
-            $(this).addClass("desaturate").animate({
-                zoom: '100%'
-            }, "fast");
-        });
 
+$(document).ready(function () {
+    $('#hire').on('click', function () {
+        window.open('mailto:smaharj1@ramapo.edu','_blank');
+    });
+    
+    
+        
+    $('.row').on('click', function () {
+        var info = $(this).next().children('.info');
+        if (info.data('isHidden') == 'true') {
+            info.slideDown();
+            info.data('isHidden','false');
+        }
+        else {
+            info.slideUp();
+            info.data('isHidden','true');
+        }
+    })
+    
+    $('#nav a').on('click', function () {
+        var id = $(this).data('id');
+        $('html, body').animate({
+                    scrollTop: $(""+id).offset().top
+        }, 700);
+    })
+    
+    $('#buttonBarForIntro a').on('click', function () {
+        var id = $(this).data('id');
+        $('html, body').animate({
+                    scrollTop: $(""+id).offset().top
+        }, 700);
+    })
+    
+    var rows = $('.row').children('.info').each(function () {
+        $(this).hide();
+        $(this).data('isHidden','true');
+    });
+    
+    
+
+
+
+    // New oneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
     $('#experience tr').on('click', function() {
+        clearOpenTabs("experience");
         var jobDetail = $(this).find('.display-option');
         jobDetail.toggle('fast');
 
@@ -21,11 +53,10 @@ $(document).ready(function() {
     });
 
     $('#extracurricular td').on('click', function() {
+        clearOpenTabs("extracurricular");
         var jobDetail = $(this).find('.display-option');
         jobDetail.toggle('fast');
 
-        var logoDisplay = $(this).find('.logo-display');
-        logoDisplay.toggle();
     });
 
     $('#skills li span').hover(function() {
@@ -48,33 +79,22 @@ $(document).ready(function() {
         }
     });
 
-    $('#inputImage').bind('change', function() {
-        alert("ok");
-        var mainFile = this;
-        $.ajax({
-            type: 'POST',
-            url: "/processImage",
-            data: {
-                inputFile: mainFile
-            },
-            dataType: 'json',
-            success: function(data) {
-                console.log('success', data);
-
-            },
-            error: function(exception) {
-                alert('Exeption:' + exception);
-            }
-        });
-        e.preventDefault();
-    });
 
     $('.contacts').on('click', function() {
         window.open($(this).data("href"));
     });
 
-
-
-
-
+   
 });
+
+function clearOpenTabs(givenID) {
+    var foundElements = $('#' + givenID).children();
+    $.each(foundElements, function(index,data) {
+        var single = $(this).find('.display-option');
+        single.css('display','none');
+
+        var logo = $(this).find('.logo-display');
+        logo.css('display','none');
+    });
+
+}

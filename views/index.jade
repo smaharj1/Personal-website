@@ -1,272 +1,308 @@
 extends layout
 
 block content
-    #mainHeader
-        img(src="./images/header_main.jpg")
-        a(href='./data/Maharjan_Resume.pdf' target='_blank') Head straight to my resume
-    
-    blockquote 
-        p When you have exhausted all possibilities, remember this - you haven't.
-        p.author - Thomas Edison
-
-    // This summarizes my travel
-    #travel
-        figure#travelTimeline
-            .col-md-4
-                img.desaturate(src="./images/nepal_icon.png")
-                figcaption From Nepal
-            .col-md-4
-                img.desaturate(src="./images/new_jersey.png")
-                figcaption To New Jersey
-            .col-md-4
-                img.desaturate(src="./images/programmer.png")
-                figcaption Studying Computer Science
+    .jarallax#mainpage
+        #myCarousel.carousel.slide(data-ride='carousel')
+            // Indicators
+            ol.carousel-indicators
+                li.active(data-target='#myCarousel', data-slide-to='0')
+                li(data-target='#myCarousel', data-slide-to='1')
+                li(data-target='#myCarousel', data-slide-to='2')
+                li(data-target='#myCarousel', data-slide-to='3')
+                li(data-target='#myCarousel', data-slide-to='4')
+            // Wrapper for slides
+            .carousel-inner(role='listbox')
+                .item.active
+                    img(src='./images/sliderImages/image1.jpg', alt='Chania')
+                    .carousel-caption
+                        p Web Development through Bootstrap workshop
+                        img(src="./images/sliderImages/MS_logo.png")
+                .item
+                    img(src='./images/sliderImages/image2.jpg', alt='MPSlife')
+                    .carousel-caption
+                        p Presenting as an MSP
+                .item
+                    img(src='/images/sliderImages/image3.jpg', alt='AndroidWear')
+                    .carousel-caption
+                        p AndroidWear workshop 
+                .item
+                    img(src='/images/sliderImages/image4.jpg', alt='GEIntern')
+                    .carousel-caption
+                        p While interning at GE 
+                .item
+                    img(src='/images/sliderImages/image5.jpg', alt='Skydiving')
+                    .carousel-caption
+                        p Moments after sky-diving 
+            // Left and right controls
+            a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
+                span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+                span.sr-only Previous
+            a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
+                span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+                span.sr-only Next
         
-    #introBlock
-        #intro
-            .col-md-8
-                h1.header-color Namaste!
-                p I am Sujil Maharjan and I am a senior Computer Science major at Ramapo College of New Jersey. I love travelling, adventures (I am sure it is imminant through sky-diving picture), listening to music, teaching, and programming. 
-            img.col-md-4(src="./images/profile_picture.jpg")
-        
-    #myCarousel.carousel.slide(data-ride='carousel')
-        // Indicators
-        ol.carousel-indicators
-            li.active(data-target='#myCarousel', data-slide-to='0')
-            li(data-target='#myCarousel', data-slide-to='1')
-            li(data-target='#myCarousel', data-slide-to='2')
-            li(data-target='#myCarousel', data-slide-to='3')
-            li(data-target='#myCarousel', data-slide-to='4')
-            li(data-target='#myCarousel', data-slide-to='5')
-
-        // Wrapper for slides
-        .carousel-inner(role='listbox')
-            .item.active
-                img(src='./images/photos/image1.jpg', alt='Chania') 
-            .item
-                img(src='./images/photos/image2.gif', alt='Chania')
-            .item
-                img(src='/images/photos/image3.jpg', alt='Flower')
-            .item
-                img(src='/images/photos/image4.jpg', alt='')
-            .item
-                img(src='/images/photos/image5.jpg', alt='')
-            .item
-                img(src='/images/photos/image6.jpg', alt='')
-
-            
-
-
-        // Left and right controls
-        a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
-            span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
-            span.sr-only Previous
-        a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
-            span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
-            span.sr-only Next
-    
-    
-    #experience
-        h1.header-color I also have a bit of experience
-        p.small-font The rows are clickable.
-
-        // Table containing all the relevant experiences
-        table.table.table-hover.table-striped
-            thead.header-color
-                th(style="width: 20%") Company
-                th(style="width: 60%") My role
-                th(style="width: 20%") Timeline
-            tbody.table-hover
-                tr
-                    td 
-                        | GE Healthcare
-                        .logo-display 
-                            img(src='./images/GE-logo.png')
-                    td 
-                        | Software Development Leadership Program Intern
-                        .display-option.description 
-                            ol
-                                li Collaborated with software developers from global teams to implement automated test cases in Agile environment
-                                li Developed integration test framework for waveform verification using Java and AngularJS
-                                li Researched and developed a waveform color comparison algorithm that uses Hue, Saturation, and Brightness for dynamic performance
-                                li Performed Computerized System Validation (CSV) on a tool that injected waveform into the solution
-                                li Developed several APIs and enhanced existing ones to make it more RESTful by using Java and Springboot
-                    td June 2016 - Present
-                tr
-                    td 
-                        | Microsoft
-                        .logo-display
-                            img(src='./images/MS-logo.png')
-                    td 
-                        | Microsoft Student Partner
-                        .display-option.description
-                            ol
-                                li Hosted bi-weekly workshops on technologies such as Azure Machine Learning, Web Development and Internet of Things with attendance of more than 10 students
-                                li Grew a strong technological community of more than 50 students and represented Microsoft on campus
-                    td Jan 2016 - May 2016
-                tr
-                    td 
-                        | Barneys New York
-                        .logo-display
-                            img(src='./images/BNY-logo.png')
-                    td 
-                        | MIS Intern
-                        .display-option.description
-                            ol
-                                li Supported end user requests for information access to various software and frameworks on a daily basis
-                                li Assisted the employees to configure and troubleshoot any issues related with computer system
-                    td Jan 2016 - May 2016
-                tr
-                    td 
-                        | Ramapo College
-                        .logo-display 
-                            img(src='./images/RCNJ-logo.png')
-                    td 
-                        | Research Assistant for Problets Project (NSF)
-                        .display-option.description
-                            ol
-                                li Created a tool to track and analyze the user’s errors in the software, modeling an effective feedback solution for Parsons puzzles software through the error analysis
-                                li Developed a User Interface to integrate Parsons puzzles and improve ease of access using Java platform
-                    td Jan 2015 - Jan 2016
-
-        p.medium-font 
-            | If you would like to look at my projects, please go to my GitHub profile by clicking
-            a(href='http://www.github.com/smaharj1', target="_blank") &nbsp here
-    
-    #skillsBlock
-        #skills
-            h1.header-color I also have skills in few languages and technologies
-            p.small-font (Hover over to find out my skill level)
-            p.small-font Index: Green = High, Orange = Medium, Blue = Have encountered with it at some point
-            ol
-                li
-                    span.high Java 
-                li
-                    span.high C++
-                li
-                    span.medium C
-                li
-                    span.high HTML/CSS
-                li
-                    span.high Javascript
-                li
-                    span.medium AngularJS
-                li
-                    span.high MySQl
-                li
-                    span.high MongoDB
-                li
-                    span.high Visual Studio
-                li
-                    span.high Eclipse
-                li
-                    span.high IntelliJ
-                li
-                    span.high JBehave
-                li
-                    span.medium ImageMagick
-                li
-                    span.medium Serenity
-                li
-                    span.high Nepali
-                li
-                    span.high English
-                li
-                    span.high Hindi
-                li
-                    span.high Newari
-            
-    #extracurricularBlock    
-        #extracurricular
-            h1.header-color I also handle other leadership roles
-            p.small-font Please click my roles to see how I feel about my roles
-            // Table containing all the relevant experiences
-            table.table
-                thead
-                    th(style='width: 33%')
-                    th(style='width: 33%')
-                    th(style='width: 33%')
-                tbody
-                    tr
-                        td
-                            .col-head 
-                                | //hackRamapo
-                            .display-option.col-body
-                                .italic Co-founder & Treasurer
-                                p.description 
-                                    | I had a great time forming this club from ground-up with few friends. The club is dedicated to 
-                                    | foster innovation and creativity in technology on campus. I held  tech workshops such as web
-                                    | development, IoT development, Machine Learning sessions, and entrepreneurship sessions to more than
-                                    | 10 students per each workshop. I also managed club's budget
-                        td
-                        td 
-                            .col-head 
-                                | Google Club
-                            .display-option.col-body
-                                .italic Vice President
-                                p.description
-                                    | I joined Google club since its beginning as a Vice-President. We held different events such as 
-                                    | recruitment by Google, profile building in LinkedIn.
+    #nav.navbar.navbar-custom
+        .container-fluid
+            .navbar-header
+                button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#collapsedMenu",aria-expanded="false") 
+                    span.glyphicon.glyphicon-list
+                    span.sr-only Toggle Navigation
+                    span.icon-bar
+                    span.icon-bar
                     
-                    tr
-                        td 
-                        td 
-                            .col-head 
-                                | International Student Organization
-                            .display-option.col-body
-                                .italic Student Advisor
-                                p.description
-                                    | I was a Secretary of ISO during my sophomore year. I introduced monthly ethnic cuisine and info sessions
-                                    | on different international cultures where more than 15 students participated. I also co-sponsored the
-                                    | club with many other cultural clubs on campus. Due to the increment in activities, the club budget increased by 100%
-                                    | for the following year. I continued as the student advisor for the club next year where I advised 
-                                    | club leaders on conducting cultural activities on campus.
-                        td 
-                    tr
-                        td 
-                            .col-head 
-                                | Ramapo TAS
-                            .display-option.col-body
-                                .italic Computer Science Tutor
-                                p.description
-                                    | I tutor Computer Science to mostly freshmen and sophomores. I am a tutor for CS I, CS II, Data Structures,
-                                    | Assembly Language, and any other classes that I have already taken.
-                        td
-                        td 
-                            .col-head 
-                                | Computer Club,
-                            .display-option.col-body
-                                .italic Active Member    
-                                p.description
-                                    | I am a very active member of Computer and Technology club. I helped several of the club events such as 
-                                    | hackathons, game nights and weekly meetings.
+                a.navbar-brand(data-id="#mainpage") Sujil Maharjan
+            .collapse.navbar-collapse#collapsedMenu
+                ul.nav.navbar-nav.navigate-menu
+                    li 
+                        a.hvr-sweep-to-bottom.active(data-id="#intro") Introduction
+                            span.sr-only 
+                    li 
+                        a.hvr-sweep-to-bottom(data-id="#experience") Portfolio
+                    li 
+                        a.hvr-sweep-to-bottom(data-id="#skills") Skills
+                    li 
+                        a.hvr-sweep-to-bottom(data-id="#extracurricular") Leadership
 
+    .jarallax.background1
+        .contentBlock
+            .content#intro
+                h1 Sujil Maharjan
+                hr
+                p.centerWidth.
+                    I am a senior Computer Science student at Ramapo College of New Jersey with a zeal for software and web development. Having said that, nothing excites me more than coding for countless hours and sketching algorithms on the board with occasional coffee breaks. I am driven towards creativity and innovation. It has led me from innovating apps at various hackathons to founding clubs on campus to help cultivate new ideas. 
+
+                    My passion for learning adventures motivates me to move outside the box when it comes to problem-solving and innovation. Besides computers, I also like to hike and have unique adventures that can make me curious.
+                
+                #buttonBarForIntro
+                    .col-md-6.col-sm-12
+                        a.btn.hvr-sweep-to-bottom#hire(type="button") HIRE ME!
+                    .col-md-6.col-sm-12
+                        a.btn.hvr-sweep-to-bottom#details(type="button", data-id="#skills")
+                            span DETAIL &nbsp &nbsp
+                            span.glyphicon.glyphicon-chevron-down
+                    
+    .jarallax.background2
+        .contentBlock
+            .content
+                #experience
+                    h1.header-color I also have a bit of experience
+                    p.small-font The rows are clickable.
+
+                    // Table containing all the relevant experiences
+                    table.table.table-hover
+                        thead.header-color
+                            th(style="width: 20%") Company
+                            th(style="width: 60%") My role
+                            th(style="width: 20%") Timeline
+                        tbody.table-hover
+                            tr
+                                td 
+                                    | GE Healthcare
+                                    .logo-display 
+                                        img(src='./images/GE-logo.png')
+                                td 
+                                    | Software Development Leadership Program Intern
+                                    .display-option.description 
+                                        ol
+                                            li Collaborated with software developers from global teams to implement automated test cases in Agile environment
+                                            li Developed integration test framework for waveform verification using Java and AngularJS
+                                            li Researched and developed a waveform color comparison algorithm that uses Hue, Saturation, and Brightness for dynamic performance
+                                            li Performed Computerized System Validation (CSV) on a tool that injected waveform into the solution
+                                            li Developed several APIs and enhanced existing ones to make it more RESTful by using Java and Springboot
+                                td June 2016 - Present
+                            tr
+                                td 
+                                    | Microsoft
+                                    .logo-display
+                                        img(src='./images/MS-logo.png')
+                                td 
+                                    | Microsoft Student Partner
+                                    .display-option.description
+                                        ol
+                                            li Hosted bi-weekly workshops on technologies such as Azure Machine Learning, Web Development and Internet of Things with attendance of more than 10 students
+                                            li Grew a strong technological community of more than 50 students and represented Microsoft on campus
+                                td Jan 2016 - May 2016
+                            tr
+                                td 
+                                    | Barneys New York
+                                    .logo-display
+                                        img(src='./images/BNY-logo.png')
+                                td 
+                                    | MIS Intern
+                                    .display-option.description
+                                        ol
+                                            li Supported end user requests for information access to various software and frameworks on a daily basis
+                                            li Assisted the employees to configure and troubleshoot any issues related with computer system
+                                td Jan 2016 - May 2016
+                            tr
+                                td 
+                                    | Ramapo College
+                                    .logo-display 
+                                        img(src='./images/RCNJ-logo.png')
+                                td 
+                                    | Research Assistant for Problets Project (NSF)
+                                    .display-option.description
+                                        ol
+                                            li Created a tool to track and analyze the user’s errors in the software, modeling an effective feedback solution for Parsons puzzles software through the error analysis
+                                            li Developed a User Interface to integrate Parsons puzzles and improve ease of access using Java platform
+                                td Jan 2015 - Jan 2016
+
+                    p.medium-font 
+                        | If you would like to look at my projects, please go to my GitHub profile by clicking 
+                        a(href='http://www.github.com/smaharj1', target="_blank") HERE
         
-    
-    .footer-space
+    .jarallax.background1
+        .contentBlock
+            .content
+                #skills
+                    h1.header-color I also have skills in few languages and technologies
+                    p.small-font (Hover over to find out my skill level)
+                    p.small-font Index: Green = High, Orange = Medium, Blue = Have encountered with it at some point
+                    ol
+                        li
+                            span.high Java 
+                        li
+                            span.high C++
+                        li
+                            span.medium C
+                        li
+                            span.high HTML/CSS
+                        li
+                            span.high Javascript
+                        li
+                            span.medium AngularJS
+                        li
+                            span.high MySQl
+                        li
+                            span.high MongoDB
+                        li
+                            span.high Visual Studio
+                        li
+                            span.high Eclipse
+                        li
+                            span.high IntelliJ
+                        li
+                            span.high JBehave
+                        li
+                            span.medium ImageMagick
+                        li
+                            span.medium Serenity
+                        li
+                            span.high Nepali
+                        li
+                            span.high English
+                        li
+                            span.high Hindi
+                        li
+                            span.high Newari
+
+    .jarallax.background2
+        .contentBlock
+            .content
+                #extracurricular
+                    h1 I also handle other leadership roles
+                    p.small-font Please click my roles to see how I feel about my roles
+                    // Table containing all the relevant experiences
+                    table.table
+                        thead
+                            th(style='width: 33%')
+                            th(style='width: 33%')
+                            th(style='width: 33%')
+                        tbody
+                            tr
+                                td
+                                    .col-head 
+                                        | //hackRamapo
+                                    .display-option.col-body
+                                        .italic Co-founder | Aug 2015 - Jan 2016
+                                        p.description 
+                                            | I had a great time forming this club from ground-up with few friends. The club is dedicated to 
+                                            | foster innovation and creativity in technology on campus. I held  tech workshops such as web
+                                            | development, IoT development, Machine Learning sessions, and entrepreneurship sessions to more than
+                                            | 10 students per each workshop. I also managed club's budget
+                                td
+                                td 
+                                    .col-head 
+                                        | Google Club
+                                    .display-option.col-body
+                                        .italic Vice President | Sept 2015 - Jan 2016
+                                        p.description
+                                            | I joined Google club since its beginning as a Vice-President. We held different events such as 
+                                            | recruitment by Google, profile building in LinkedIn.
+                            
+                            tr
+                                td 
+                                td 
+                                    .col-head 
+                                        | International Student Organization
+                                    .display-option.col-body
+                                        .italic Student Advisor | Aug 2014 - Mar 2016
+                                        p.description
+                                            | I was a Secretary of ISO during my sophomore year. I introduced monthly ethnic cuisine and info sessions
+                                            | on different international cultures where more than 15 students participated. I also co-sponsored the
+                                            | club with many other cultural clubs on campus. Due to the increment in activities, the club budget increased by 100%
+                                            | for the following year. I continued as the student advisor for the club next year where I advised 
+                                            | club leaders on conducting cultural activities on campus.
+                                td 
+                            tr
+                                td 
+                                    .col-head 
+                                        | Ramapo TAS
+                                    .display-option.col-body
+                                        .italic Computer Science Tutor | Aug 2015 - Present
+                                        p.description
+                                            | I tutor Computer Science to mostly freshmen and sophomores. I am a tutor for CS I, CS II, Data Structures,
+                                            | Assembly Language, and any other classes that I have already taken.
+                                td
+                                td 
+                                    .col-head 
+                                        | Computer Club
+                                    .display-option.col-body
+                                        .italic Active Member | Since 2014 
+                                        p.description
+                                            | I am a very active member of Computer and Technology club. I helped several of the club events such as 
+                                            | hackathons, game nights and weekly meetings.
+
+                            
+                
+                    
+                    
+                    
+    .gap
         #footer
             h3.header-color So, what do you think?
-            .black-bg-font Please feel free to contact me if you have any questions!
+            p.small-font Please feel free to contact me if you have any questions!
 
             table
                 tbody
                     tr.contacts(data-href="http://www.github.com/smaharj1")
                         td 
                             img(src="./images/icons/github.png")
-                        td.black-bg-font Explore my GitHub
+                        td.small-font Explore my GitHub
                     
                     tr.contacts(data-href="https://www.facebook.com/tsujil")
                         td 
                             img(src="./images/icons/facebook.png")
-                        td.black-bg-font Ping me in Facebook
+                        td.small-font Ping me in Facebook
                     
                     tr.contacts(data-href="https://www.linkedin.com/in/sujilmaharjan")
                         td 
                             img(src="./images/icons/linkedin.png")
-                        td.black-bg-font Link with me
+                        td.small-font Link with me
                     tr.contacts(data-href="mailto:smaharj1@ramapo.edu")
                         td 
                             img#gmail-logo(src="http://www.socialtalent.co/wp-content/uploads/2015/07/Gmail-Logo.png")
-                        td.black-bg-font Email me
+                        td.small-font Email me
 
- 
+    script(type='text/javascript').
+        $('.jarallax').jarallax({
+            speed: 0.5,
+            imgWidth: 1366,
+            imgHeight: 768
+        })
+        $('#nav').affix({
+          offset: {
+            top: $('#mainpage').height()-$('#nav').height()
+          }
+        })
+        
